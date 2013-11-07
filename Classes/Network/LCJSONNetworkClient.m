@@ -1,46 +1,34 @@
 //
-//  LCNetworkClient.m
-//  LoveClasses
+//  LCJSONNetworkClient.m
+//  TBClient
 //
-//  Created by cxz(@bitpanda) on 13-5-16.
-//  Copyright (c) 2013年 cxz. All rights reserved.
+//  Created by cxz(@bitpanda) on 13-11-6.
+//  Copyright (c) 2013年 bitpanda. All rights reserved.
 //
 
-#import "LCNetworkClient.h"
-#import "LCHTTPRequestOperation.h"
+#import "LCJSONNetworkClient.h"
+#import "LCJSONRequestOperation.h"
 
-@implementation LCNetworkClient
+@implementation LCJSONNetworkClient
 
 + (id)sharedClient
 {
-    static LCNetworkClient *_sharedClient = nil;
+    static LCJSONNetworkClient *_sharedClient = nil;
     static dispatch_once_t predicate;
     dispatch_once(&predicate, ^{
-        NSURL *url = [NSURL URLWithString:LCDOMAIN];
+        NSURL *url = [NSURL URLWithString:LCJSONDOMAIN];
         _sharedClient = [[self alloc] initWithBaseURL:url];
     });
     
     return _sharedClient;
 }
 
-+ (id)sharedJsonClient
-{
-    static LCNetworkClient *_sharedJsonClient = nil;
-    static dispatch_once_t predicate;
-    dispatch_once(&predicate, ^{
-        NSURL *url = [NSURL URLWithString:LCDOMAIN];
-        _sharedJsonClient = [[self alloc] initWithBaseURL:url];
-    });
-    
-    return _sharedJsonClient;
-}
-
 - (id)initWithBaseURL:(NSURL *)url
 {
     if ((self = [super initWithBaseURL:url]))
     {
-        [self registerHTTPOperationClass:[LCHTTPRequestOperation class]];
-//        [self registerErrorHandlerClass:[XX class]];
+        [self registerHTTPOperationClass:[LCJSONRequestOperation class]];
+        //        [self registerErrorHandlerClass:[XX class]];
         
         [self initDefaultParameters];
         
@@ -75,7 +63,7 @@
                    appendDefaultParameters:(BOOL)appendDefaultParameters
 {
     NSMutableURLRequest *request = [super requestWithMethod:method path:path parameters:parameters tag:tag appendDefaultParameters:appendDefaultParameters];
-
+    
     
     return request;
 }
