@@ -23,8 +23,10 @@ typedef void(^LCActivityCompletionHandler)(BOOL success,id responseObject, NSErr
 
 + (LCNetworkEngine *)sharedInstance;
 
-//统计app打开次数
+//
 - (SNHTTPRequestOperationWrapper *)initCookieWithCompletionHandler:(LCActivityCompletionHandler)completionHandler;
 
+//
+- (SNHTTPRequestOperationWrapper *)readyLoginWithCompletionHandler:(LCActivityCompletionHandler)completionHandler;
 
 @end

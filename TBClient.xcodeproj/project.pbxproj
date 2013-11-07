@@ -93,6 +93,7 @@
 		1169CF80182A3966002135CF /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1169CF7F182A3966002135CF /* libsqlite3.dylib */; };
 		1169CF82182A3974002135CF /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1169CF81182A3974002135CF /* QuartzCore.framework */; };
 		11C6514A182A48A3009744BD /* LCHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 11C65149182A48A3009744BD /* LCHTTPRequestOperation.m */; };
+		BA5AC2D5182A745C0092882E /* LCJSONNetworkClient.m in Sources */ = {isa = PBXBuildFile; fileRef = BA5AC2D4182A745C0092882E /* LCJSONNetworkClient.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -265,6 +266,8 @@
 		1169CF81182A3974002135CF /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		11C65148182A48A3009744BD /* LCHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCHTTPRequestOperation.h; sourceTree = "<group>"; };
 		11C65149182A48A3009744BD /* LCHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCHTTPRequestOperation.m; sourceTree = "<group>"; };
+		BA5AC2D3182A745C0092882E /* LCJSONNetworkClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCJSONNetworkClient.h; sourceTree = "<group>"; };
+		BA5AC2D4182A745C0092882E /* LCJSONNetworkClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCJSONNetworkClient.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -405,6 +408,8 @@
 				11C65149182A48A3009744BD /* LCHTTPRequestOperation.m */,
 				113F2A391828F7FC001726C3 /* LCNetworkClient.h */,
 				113F2A3A1828F7FC001726C3 /* LCNetworkClient.m */,
+				BA5AC2D3182A745C0092882E /* LCJSONNetworkClient.h */,
+				BA5AC2D4182A745C0092882E /* LCJSONNetworkClient.m */,
 				113F2A3B1828F7FC001726C3 /* LCNetworkEngine.h */,
 				113F2A3C1828F7FC001726C3 /* LCNetworkEngine.m */,
 			);
@@ -810,6 +815,7 @@
 				113F2B0C1828F958001726C3 /* AFURLConnectionOperation.m in Sources */,
 				113F2A001828EA22001726C3 /* LCAppDelegate.m in Sources */,
 				113F2A3D1828F7FC001726C3 /* LCJSONRequestOperation.m in Sources */,
+				BA5AC2D5182A745C0092882E /* LCJSONNetworkClient.m in Sources */,
 				113F2AFC1828F958001726C3 /* MKMapView+ZoomLevel.m in Sources */,
 				113F2A341828EB6B001726C3 /* LCHomeViewController.m in Sources */,
 				113F2B121828F958001726C3 /* ASIDataDecompressor.m in Sources */,

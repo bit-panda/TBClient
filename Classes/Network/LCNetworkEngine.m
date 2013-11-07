@@ -8,6 +8,7 @@
 
 #import "LCNetworkEngine.h"
 #import "SynthesizeSingleton.h"
+#import "LCJSONNetworkClient.h"
 
 @implementation LCNetworkEngine
 
@@ -43,11 +44,34 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(LCNetworkEngine)
     }];
 }
 
+- (SNHTTPRequestOperationWrapper *)readyLoginWithCompletionHandler:(LCActivityCompletionHandler)completionHandler
+{
+    LCJSONNetworkClient *sharedNetworkClient = [LCJSONNetworkClient sharedClient];
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    
+    return [sharedNetworkClient getPath:TBClient_Init_Login_Aysn_Url parameters:params completionBlock:^(SNHTTPRequestOperationWrapper *operationWrapper, id responseObject, NSError *error) {
+        if (error)
+        {
+            if (completionHandler)
+            {
+                completionHandler(NO,nil,error);
+            }
+        }
+        else
+        {
+            if (responseObject)
+            {
+                completionHandler(NO,responseObject, error);
+            }
+        }
+    }];
+}
+
 - (SNHTTPRequestOperationWrapper *)loginWithName:(NSString *)name password:(NSString *)password extraParams:(NSDictionary *)extraParams CompletionHandler:(LCActivityCompletionHandler)completionHandler
 {
     LCNetworkClient *sharedNetworkClient = [LCNetworkClient sharedClient];
     NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary:extraParams];
-    SNNetworkAddRequestParameter(params, @"appid", name);
+    SNNetworkAddRequestParameter(params, @"uname", name);
     SNNetworkAddRequestParameter(params, @"appid", password);
     
     return [sharedNetworkClient getPath:TBClient_Login_Url parameters:params completionBlock:^(SNHTTPRequestOperationWrapper *operationWrapper, id responseObject, NSError *error) {

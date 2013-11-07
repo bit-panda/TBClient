@@ -14,6 +14,7 @@
 @interface LCNetworkClient : SNNetworkClient
 
 + (id)sharedClient;
++ (id)sharedJsonClient;
 - (void)initDefaultParameters;
 
 @end
