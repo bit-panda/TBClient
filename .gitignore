@@ -74,15 +74,15 @@ build/
 #     - unless they are "shared")
 #
 # NB: this is exclusive with OPTION 2 below
-xcuserdata
- 
+TBClient.xcodeproj/project.xcworkspace/xcuserdata/*
+
 # OPTION 2: ---------------------------------
 #     get rid of ALL personal settings, but KEEP SOME OF THEM
 #     - NB: you must manually uncomment the bits you want to keep
 #
 # NB: this is exclusive with OPTION 1 above
-#
-xcuserdata/**/*
+##
+#xcuserdata/**/*
  
 #     (requires option 2 above): Personal Schemes
 #
