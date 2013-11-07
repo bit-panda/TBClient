@@ -74,6 +74,8 @@ build/
 #     - unless they are "shared")
 #
 # NB: this is exclusive with OPTION 2 below
+*.xcworkspace  
+xcuserdata
 TBClient.xcodeproj/project.xcworkspace/xcuserdata/*
 
 # OPTION 2: ---------------------------------
