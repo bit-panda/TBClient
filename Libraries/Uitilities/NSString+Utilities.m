@@ -17,4 +17,27 @@
     ![self stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]].length;
 }
 
+- (NSString*)encodeURL
+{
+    return self;
+    NSString *newString = NSMakeCollectable([(NSString *)CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault, (CFStringRef)self, NULL, CFSTR(":/?#[]@!$ &'()*+,;=\"<>%{}|\\^~`"), NSUTF8StringEncoding) autorelease]);
+    
+    if (newString) {
+        return newString;
+    }
+    return @"";
+}
+
+- (NSString *)URLEncode
+{
+    return [self URLEncodeWithEncoding:NSUTF8StringEncoding];
+}
+
+- (NSString *)URLEncodeWithEncoding:(NSStringEncoding)encoding
+{
+    static NSString * const kAFLegalCharactersToBeEscaped = @"?!@#$^&%*+=,:;'\"`<>()[]{}/\\|~ ";
+    
+	return [(NSString *)CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault, (CFStringRef)self, NULL, (CFStringRef)kAFLegalCharactersToBeEscaped, CFStringConvertNSStringEncodingToEncoding(encoding)) autorelease];
+}
+
 @end

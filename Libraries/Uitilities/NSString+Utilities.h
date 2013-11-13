@@ -11,5 +11,7 @@
 @interface NSString (Utilities)
 
 - (BOOL)isEmptyOrWhitespace;
-
+- (NSString*)encodeURL;
+- (NSString *)URLEncode;
+- (NSString *)URLEncodeWithEncoding:(NSStringEncoding)encoding;
 @end

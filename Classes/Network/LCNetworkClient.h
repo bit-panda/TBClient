@@ -11,7 +11,15 @@
 
 #define LCDOMAIN            @"https://dynamic.12306.cn/"
 
+typedef enum
+{
+    LCNETWORK_CLIENT_TYPE_STRING = 0,
+    LCNETWORK_CLIENT_TYPE_JSON = 1,
+} LCNETWORK_CLIENT_TYPE;
+
 @interface LCNetworkClient : SNNetworkClient
+
+@property (nonatomic, assign) LCNETWORK_CLIENT_TYPE clientType;
 
 + (id)sharedClient;
 + (id)sharedJsonClient;

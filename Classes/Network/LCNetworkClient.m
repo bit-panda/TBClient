@@ -8,6 +8,7 @@
 
 #import "LCNetworkClient.h"
 #import "LCHTTPRequestOperation.h"
+#import "LCJSONRequestOperation.h"
 
 @implementation LCNetworkClient
 
@@ -17,7 +18,7 @@
     static dispatch_once_t predicate;
     dispatch_once(&predicate, ^{
         NSURL *url = [NSURL URLWithString:LCDOMAIN];
-        _sharedClient = [[self alloc] initWithBaseURL:url];
+        _sharedClient = [[self alloc] initWithBaseURL:url type:LCNETWORK_CLIENT_TYPE_STRING];
     });
     
     return _sharedClient;
@@ -29,17 +30,35 @@
     static dispatch_once_t predicate;
     dispatch_once(&predicate, ^{
         NSURL *url = [NSURL URLWithString:LCDOMAIN];
-        _sharedJsonClient = [[self alloc] initWithBaseURL:url];
+        _sharedJsonClient = [[self alloc] initWithBaseURL:url type:LCNETWORK_CLIENT_TYPE_JSON];
     });
     
     return _sharedJsonClient;
 }
 
-- (id)initWithBaseURL:(NSURL *)url
+- (id)initWithBaseURL:(NSURL *)url type:(LCNETWORK_CLIENT_TYPE)type
 {
     if ((self = [super initWithBaseURL:url]))
     {
-        [self registerHTTPOperationClass:[LCHTTPRequestOperation class]];
+        self.clientType = type;
+        
+        switch (type)
+        {
+            case LCNETWORK_CLIENT_TYPE_JSON:
+            {
+                [self registerHTTPOperationClass:[LCJSONRequestOperation class]];
+                break;
+            }
+            
+            case LCNETWORK_CLIENT_TYPE_STRING:
+            default:
+            {
+                [self registerHTTPOperationClass:[LCHTTPRequestOperation class]];
+                break;
+            }
+        }
+        
+
 //        [self registerErrorHandlerClass:[XX class]];
         
         [self initDefaultParameters];

@@ -9,22 +9,6 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Classes/Controller/LCHomeViewController.m"
-            timestampString = "405425239.191621"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "74"
-            endingLineNumber = "74"
-            landmarkName = "-initLoginData"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "Libraries/Vendors/SNNetworking/SNHTTPRequestOperationWrapper.m"
             timestampString = "405423914.232176"
             startingColumnNumber = "9223372036854775807"
@@ -89,42 +73,122 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Libraries/Vendors/AFNetworking/AFJSONRequestOperation.m"
-            timestampString = "405424118.667071"
+            filePath = "Classes/Controller/LCHomeViewController.m"
+            timestampString = "406011181.309707"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "105"
-            endingLineNumber = "105"
-            landmarkName = "-setCompletionBlockWithSuccess:failure:"
+            startingLineNumber = "140"
+            endingLineNumber = "140"
+            landmarkName = "-leftTicket"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Classes/Controller/LCHomeViewController.m"
+            timestampString = "406017255.351116"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "152"
+            endingLineNumber = "152"
+            landmarkName = "-leftTicket"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Classes/Controller/LCHomeViewController.m"
+            timestampString = "406017255.351116"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "153"
+            endingLineNumber = "153"
+            landmarkName = "-leftTicket"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Libraries/Vendors/SNNetworking/SNNetworkClient.m"
+            timestampString = "406011545.54685"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "508"
+            endingLineNumber = "508"
+            landmarkName = "-getPath:parameters:successBlock:failureBlock:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Libraries/Vendors/SNNetworking/SNNetworkClient.m"
+            timestampString = "406012961.569865"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "371"
+            endingLineNumber = "371"
+            landmarkName = "-parametersByAppendDefaultParameters:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Libraries/Vendors/ASIHttpRequest/ASIFormDataRequest.m"
+            timestampString = "406016011.511854"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "-encodeURL:"
             landmarkType = "5">
             <Locations>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "-[AFJSONRequestOperation setCompletionBlockWithSuccess:failure:]"
+                  symbolName = "-[ASIFormDataRequest encodeURL:]"
                   moduleName = "TBClient"
-                  urlString = "file:///Users/bitpanda/code/test/TBClient/Libraries/Vendors/AFNetworking/AFJSONRequestOperation.m"
-                  timestampString = "405425602.153291"
+                  urlString = "file:///Users/bitpanda/code/git/TBClient/Libraries/Vendors/ASIHttpRequest/ASIFormDataRequest.m"
+                  timestampString = "406019574.332617"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "105"
-                  endingLineNumber = "105"
-                  offsetFromSymbolStart = "75">
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "39">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "__64-[AFJSONRequestOperation setCompletionBlockWithSuccess:failure:]_block_invoke"
+                  symbolName = "-[ASIFormDataRequest encodeURL:]"
                   moduleName = "TBClient"
-                  urlString = "file:///Users/bitpanda/code/test/TBClient/Libraries/Vendors/AFNetworking/AFJSONRequestOperation.m"
-                  timestampString = "405425602.153491"
+                  urlString = "file:///Users/bitpanda/code/git/TBClient/Libraries/Vendors/ASIHttpRequest/ASIFormDataRequest.m"
+                  timestampString = "406019574.332887"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "105"
-                  endingLineNumber = "105"
-                  offsetFromSymbolStart = "21">
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "205">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -135,13 +199,59 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Libraries/Vendors/image_loader/ImageLoader.m"
-            timestampString = "405425339.380464"
+            filePath = "Classes/Network/LCNetworkEngine.m"
+            timestampString = "406017306.5083"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "85"
-            endingLineNumber = "85"
-            landmarkName = "-setImageWithURL:toView:"
+            startingLineNumber = "144"
+            endingLineNumber = "144"
+            landmarkName = "-leftTicketWithExtraParams:CompletionHandler:"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[LCNetworkEngine leftTicketWithExtraParams:CompletionHandler:]"
+                  moduleName = "TBClient"
+                  urlString = "file:///Users/bitpanda/code/git/TBClient/Classes/Network/LCNetworkEngine.m"
+                  timestampString = "406019574.333201"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "144"
+                  endingLineNumber = "144"
+                  offsetFromSymbolStart = "832">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__63-[LCNetworkEngine leftTicketWithExtraParams:CompletionHandler:]_block_invoke91"
+                  moduleName = "TBClient"
+                  urlString = "file:///Users/bitpanda/code/git/TBClient/Classes/Network/LCNetworkEngine.m"
+                  timestampString = "406019574.333532"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "145"
+                  endingLineNumber = "145"
+                  offsetFromSymbolStart = "36">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Libraries/Vendors/AFNetworking/AFHTTPClient.m"
+            timestampString = "406017496.985544"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "454"
+            endingLineNumber = "454"
+            landmarkName = "-requestWithMethod:path:parameters:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
