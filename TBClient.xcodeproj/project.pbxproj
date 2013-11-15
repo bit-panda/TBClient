@@ -93,6 +93,8 @@
 		1169CF80182A3966002135CF /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1169CF7F182A3966002135CF /* libsqlite3.dylib */; };
 		1169CF82182A3974002135CF /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1169CF81182A3974002135CF /* QuartzCore.framework */; };
 		11C6514A182A48A3009744BD /* LCHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 11C65149182A48A3009744BD /* LCHTTPRequestOperation.m */; };
+		11E978631835F5BD009C8C54 /* LCBackgroundRunner.m in Sources */ = {isa = PBXBuildFile; fileRef = 11E978621835F5BD009C8C54 /* LCBackgroundRunner.m */; };
+		11E97866183601BA009C8C54 /* LCLoopLoadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 11E97865183601BA009C8C54 /* LCLoopLoadManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -265,6 +267,10 @@
 		1169CF81182A3974002135CF /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		11C65148182A48A3009744BD /* LCHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCHTTPRequestOperation.h; sourceTree = "<group>"; };
 		11C65149182A48A3009744BD /* LCHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCHTTPRequestOperation.m; sourceTree = "<group>"; };
+		11E978611835F5BD009C8C54 /* LCBackgroundRunner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCBackgroundRunner.h; sourceTree = "<group>"; };
+		11E978621835F5BD009C8C54 /* LCBackgroundRunner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCBackgroundRunner.m; sourceTree = "<group>"; };
+		11E97864183601BA009C8C54 /* LCLoopLoadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCLoopLoadManager.h; sourceTree = "<group>"; };
+		11E97865183601BA009C8C54 /* LCLoopLoadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCLoopLoadManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -347,10 +353,11 @@
 		113F2A2A1828EB6B001726C3 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				11E9785E1835F592009C8C54 /* Field */,
+				11E9785F1835F592009C8C54 /* Manager */,
+				11E978601835F592009C8C54 /* Model */,
 				113F2A361828F7FC001726C3 /* Network */,
 				113F2A2B1828EB6B001726C3 /* Controller */,
-				113F2A301828EB6B001726C3 /* Field */,
-				113F2A311828EB6B001726C3 /* Model */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -364,20 +371,6 @@
 				113F2A2F1828EB6B001726C3 /* LCViewController.m */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		113F2A301828EB6B001726C3 /* Field */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Field;
-			sourceTree = "<group>";
-		};
-		113F2A311828EB6B001726C3 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		113F2A321828EB6B001726C3 /* Libraries */ = {
@@ -701,6 +694,31 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		11E9785E1835F592009C8C54 /* Field */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Field;
+			sourceTree = "<group>";
+		};
+		11E9785F1835F592009C8C54 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				11E978611835F5BD009C8C54 /* LCBackgroundRunner.h */,
+				11E978621835F5BD009C8C54 /* LCBackgroundRunner.m */,
+				11E97864183601BA009C8C54 /* LCLoopLoadManager.h */,
+				11E97865183601BA009C8C54 /* LCLoopLoadManager.m */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		11E978601835F592009C8C54 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -769,6 +787,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11E97866183601BA009C8C54 /* LCLoopLoadManager.m in Sources */,
 				113F2B3F1828F958001726C3 /* SNXMLRequestOperation.m in Sources */,
 				113F2B2F1828F958001726C3 /* SIMenuTable.m in Sources */,
 				113F2B061828F958001726C3 /* AFHTTPRequestOperation.m in Sources */,
@@ -806,6 +825,7 @@
 				113F2B161828F958001726C3 /* ASIInputStream.m in Sources */,
 				113F2B241828F958001726C3 /* WBGIFDecodeOperation.m in Sources */,
 				113F2B0D1828F958001726C3 /* AFXMLRequestOperation.m in Sources */,
+				11E978631835F5BD009C8C54 /* LCBackgroundRunner.m in Sources */,
 				113F2B171828F958001726C3 /* ASINetworkQueue.m in Sources */,
 				113F2B0C1828F958001726C3 /* AFURLConnectionOperation.m in Sources */,
 				113F2A001828EA22001726C3 /* LCAppDelegate.m in Sources */,
