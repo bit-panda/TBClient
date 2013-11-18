@@ -9,5 +9,5 @@
 #import "LCViewController.h"
 
 @interface LCHomeViewController : LCViewController
-
+- (void) refreshLablel;
 @end

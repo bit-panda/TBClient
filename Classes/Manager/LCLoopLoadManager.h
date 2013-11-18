@@ -39,21 +39,36 @@ typedef enum kLCLOOP_STATUS_STEP
 }kLCLOOP_STATUS_STEP;
 
 
-typedef enum kLCLoginFailedType
+typedef enum LCLoginFailedType
 {
     kLCLoginFailedTypeUnknown = 0,
     kLCLoginFailedTypeErrorUsername,
     kLCLoginFailedTypeErrorPassword,
     kLCLoginFailedTypeErrorVerifycode
     
-}kLCLoginFailedType;
+}LCLoginFailedType;
 
 @interface LCLoopLoadManager : NSObject
 {
     kLCLOOP_STATUS_STEP step;
+    LCLoginFailedType loginFailedType;
     BOOL running;
+    
+    NSString *loginRand;
+    
+    NSString *username;
+    NSString *password;
 }
 
-+ (LCLoopLoadManager *)sharedInstance;
+@property (nonatomic, assign) kLCLOOP_STATUS_STEP step;
+@property (nonatomic, retain) UIImageView *verifyImageView;
+@property (nonatomic, retain) NSString *verifyCodeString;
 
+@property (nonatomic, assign) NSUInteger countOfGetTickets;
+@property (nonatomic, assign) NSUInteger countOfLogin;
+
++ (LCLoopLoadManager *)sharedInstance;
+- (void) start;
+- (void) stop;
+- (void) runLoop;
 @end

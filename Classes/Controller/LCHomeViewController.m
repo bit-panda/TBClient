@@ -9,6 +9,8 @@
 #import "LCHomeViewController.h"
 #import "LCNetworkEngine.h"
 #import "ImageLoader.h"
+#import "LCAccountManager.h"
+#import "LCLoopLoadManager.h"
 
 @interface LCHomeViewController ()
 {
@@ -20,6 +22,7 @@
     UIButton *loginButton;
     UITextView *verifyTextView;
     UIImageView *verifyImageView;
+    UILabel *flagLabel;
 }
 
 @end
@@ -36,8 +39,15 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self)
     {
-        username = @"bi7trace";
-        password = @"my_local";
+        [LCAccountManager current].username = @"张特";
+        [LCAccountManager current].nickname = @"bi7trace";
+        [LCAccountManager current].password = @"my_local";
+        
+        [LCAccountManager current].date = [[NSDate date] toDateString];
+        [LCAccountManager current].time = @"00:00--24:00";
+        
+        [LCAccountManager current].trainPassType = @"QB";
+        [LCAccountManager current].trainPassClass = @"QB#D#Z#T#K#QT#";
     }
     return self;
 }
@@ -59,7 +69,13 @@
     [loginButton addTarget:self action:@selector(readyForLogin) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:loginButton];
     
-    [self initLoginData];
+    flagLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 200, 100, 30)];
+    flagLabel.text = [NSString stringWithFormat:@"%d + %d", [LCLoopLoadManager sharedInstance].countOfGetTickets, [LCLoopLoadManager sharedInstance].countOfLogin];
+    [self.view addSubview:flagLabel];
+    
+    [LCLoopLoadManager sharedInstance].verifyImageView = verifyImageView;
+    
+    [[LCLoopLoadManager sharedInstance] start];
 }
 
 - (void)didReceiveMemoryWarning
@@ -69,6 +85,12 @@
 }
 
 #pragma mark -
+
+- (void) refreshLablel
+{
+    flagLabel.text = [NSString stringWithFormat:@"%d + %d", [LCLoopLoadManager sharedInstance].countOfGetTickets, [LCLoopLoadManager sharedInstance].countOfLogin];
+}
+
 - (void)initLoginData
 {
     [[LCNetworkEngine sharedInstance] initCookieWithCompletionHandler:^(BOOL success, id responseObject, NSError *error) {
@@ -95,21 +117,9 @@
 
 - (void)loginAction
 {
-    NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    [params setObject:@"null" forKey:@"form_tk"];
-    [params setObject:@"undefined" forKey:@"myversion"];
-    [params setObject:@"Y" forKey:@"refundFlag"];
-    [params setObject:@"N" forKey:@"refundLogin"];
-    [params setObject:verifyTextView.text forKey:@"randCode"];
-    [params setObject:loginRand forKey:@"loginRand"];
-    
-    [[LCNetworkEngine sharedInstance] loginWithName:username password:password extraParams:params CompletionHandler:^(BOOL success, id responseObject, NSError *error) {
-        NSString *html = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
-        NSLog(@"%@",html);
-        [self initLeftTicket];
-        
-    }];
-    
+    [LCLoopLoadManager sharedInstance].verifyCodeString = verifyTextView.text;
+    [LCLoopLoadManager sharedInstance].step = kLCLOOP_STATUS_STEP_DID_LOAD_VERIFYIMAGE;
+    [[LCLoopLoadManager sharedInstance] start];
 }
 
 - (void)initLeftTicket

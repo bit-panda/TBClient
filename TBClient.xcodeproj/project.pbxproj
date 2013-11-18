@@ -90,8 +90,15 @@
 		113F2B3E1828F958001726C3 /* SNNetworkOAuthClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 113F2AEC1828F958001726C3 /* SNNetworkOAuthClient.m */; };
 		113F2B3F1828F958001726C3 /* SNXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 113F2AEE1828F958001726C3 /* SNXMLRequestOperation.m */; };
 		113F2B401828F958001726C3 /* TBXML.m in Sources */ = {isa = PBXBuildFile; fileRef = 113F2AF11828F958001726C3 /* TBXML.m */; };
+		114D0EEA1839A6710072FD36 /* LCAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 114D0EE91839A6710072FD36 /* LCAccount.m */; };
+		114D0EED1839AC740072FD36 /* LCAccountManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 114D0EEC1839AC740072FD36 /* LCAccountManager.m */; };
+		114D0EF31839DBB60072FD36 /* HTMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 114D0EF01839DBB60072FD36 /* HTMLNode.m */; };
+		114D0EF41839DBB60072FD36 /* HTMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 114D0EF21839DBB60072FD36 /* HTMLParser.m */; };
+		114D0EF71839DF150072FD36 /* LCTicket.m in Sources */ = {isa = PBXBuildFile; fileRef = 114D0EF61839DF150072FD36 /* LCTicket.m */; };
 		1169CF80182A3966002135CF /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1169CF7F182A3966002135CF /* libsqlite3.dylib */; };
 		1169CF82182A3974002135CF /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1169CF81182A3974002135CF /* QuartzCore.framework */; };
+		11730F6A183A22FF0005C272 /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 11730F69183A22FF0005C272 /* libxml2.2.dylib */; };
+		11730F6C183A23180005C272 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 11730F6B183A23180005C272 /* libxml2.dylib */; };
 		11C6514A182A48A3009744BD /* LCHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 11C65149182A48A3009744BD /* LCHTTPRequestOperation.m */; };
 		11E978631835F5BD009C8C54 /* LCBackgroundRunner.m in Sources */ = {isa = PBXBuildFile; fileRef = 11E978621835F5BD009C8C54 /* LCBackgroundRunner.m */; };
 		11E97866183601BA009C8C54 /* LCLoopLoadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 11E97865183601BA009C8C54 /* LCLoopLoadManager.m */; };
@@ -263,8 +270,20 @@
 		113F2AF01828F958001726C3 /* TBXML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBXML.h; sourceTree = "<group>"; };
 		113F2AF11828F958001726C3 /* TBXML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBXML.m; sourceTree = "<group>"; };
 		113F2AF31828F958001726C3 /* SynthesizeSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SynthesizeSingleton.h; sourceTree = "<group>"; };
+		114D0EE81839A6710072FD36 /* LCAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCAccount.h; sourceTree = "<group>"; };
+		114D0EE91839A6710072FD36 /* LCAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCAccount.m; sourceTree = "<group>"; };
+		114D0EEB1839AC740072FD36 /* LCAccountManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCAccountManager.h; sourceTree = "<group>"; };
+		114D0EEC1839AC740072FD36 /* LCAccountManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCAccountManager.m; sourceTree = "<group>"; };
+		114D0EEF1839DBB60072FD36 /* HTMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLNode.h; sourceTree = "<group>"; };
+		114D0EF01839DBB60072FD36 /* HTMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLNode.m; sourceTree = "<group>"; };
+		114D0EF11839DBB60072FD36 /* HTMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLParser.h; sourceTree = "<group>"; };
+		114D0EF21839DBB60072FD36 /* HTMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLParser.m; sourceTree = "<group>"; };
+		114D0EF51839DF150072FD36 /* LCTicket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCTicket.h; sourceTree = "<group>"; };
+		114D0EF61839DF150072FD36 /* LCTicket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCTicket.m; sourceTree = "<group>"; };
 		1169CF7F182A3966002135CF /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		1169CF81182A3974002135CF /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		11730F69183A22FF0005C272 /* libxml2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.dylib; path = usr/lib/libxml2.2.dylib; sourceTree = SDKROOT; };
+		11730F6B183A23180005C272 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		11C65148182A48A3009744BD /* LCHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCHTTPRequestOperation.h; sourceTree = "<group>"; };
 		11C65149182A48A3009744BD /* LCHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCHTTPRequestOperation.m; sourceTree = "<group>"; };
 		11E978611835F5BD009C8C54 /* LCBackgroundRunner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCBackgroundRunner.h; sourceTree = "<group>"; };
@@ -278,6 +297,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11730F6C183A23180005C272 /* libxml2.dylib in Frameworks */,
+				11730F6A183A22FF0005C272 /* libxml2.2.dylib in Frameworks */,
 				111C7084182A3C2900CA7153 /* CFNetwork.framework in Frameworks */,
 				111C7082182A3C1000CA7153 /* libz.dylib in Frameworks */,
 				111C7080182A3C0900CA7153 /* libz.1.2.5.dylib in Frameworks */,
@@ -315,6 +336,8 @@
 		113F29EE1828EA22001726C3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				11730F6B183A23180005C272 /* libxml2.dylib */,
+				11730F69183A22FF0005C272 /* libxml2.2.dylib */,
 				111C7083182A3C2900CA7153 /* CFNetwork.framework */,
 				111C7081182A3C1000CA7153 /* libz.dylib */,
 				111C707F182A3C0900CA7153 /* libz.1.2.5.dylib */,
@@ -431,6 +454,7 @@
 		113F2A671828F958001726C3 /* Vendors */ = {
 			isa = PBXGroup;
 			children = (
+				114D0EEE1839DBB60072FD36 /* HTMLParser */,
 				113F2A681828F958001726C3 /* AFNetworking */,
 				113F2A7E1828F958001726C3 /* AKSegmentedControl */,
 				113F2A811828F958001726C3 /* ASIHttpRequest */,
@@ -694,6 +718,17 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		114D0EEE1839DBB60072FD36 /* HTMLParser */ = {
+			isa = PBXGroup;
+			children = (
+				114D0EEF1839DBB60072FD36 /* HTMLNode.h */,
+				114D0EF01839DBB60072FD36 /* HTMLNode.m */,
+				114D0EF11839DBB60072FD36 /* HTMLParser.h */,
+				114D0EF21839DBB60072FD36 /* HTMLParser.m */,
+			);
+			path = HTMLParser;
+			sourceTree = "<group>";
+		};
 		11E9785E1835F592009C8C54 /* Field */ = {
 			isa = PBXGroup;
 			children = (
@@ -708,6 +743,8 @@
 				11E978621835F5BD009C8C54 /* LCBackgroundRunner.m */,
 				11E97864183601BA009C8C54 /* LCLoopLoadManager.h */,
 				11E97865183601BA009C8C54 /* LCLoopLoadManager.m */,
+				114D0EEB1839AC740072FD36 /* LCAccountManager.h */,
+				114D0EEC1839AC740072FD36 /* LCAccountManager.m */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -715,6 +752,10 @@
 		11E978601835F592009C8C54 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				114D0EE81839A6710072FD36 /* LCAccount.h */,
+				114D0EE91839A6710072FD36 /* LCAccount.m */,
+				114D0EF51839DF150072FD36 /* LCTicket.h */,
+				114D0EF61839DF150072FD36 /* LCTicket.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -812,8 +853,10 @@
 				113F2B231828F958001726C3 /* TTURLCache.m in Sources */,
 				113F2B011828F958001726C3 /* UIImage+Local.m in Sources */,
 				113F2B221828F958001726C3 /* TTMyUtil.m in Sources */,
+				114D0EF71839DF150072FD36 /* LCTicket.m in Sources */,
 				113F2B1C1828F958001726C3 /* FMDatabase.m in Sources */,
 				113F2B101828F958001726C3 /* ASIAuthenticationDialog.m in Sources */,
+				114D0EEA1839A6710072FD36 /* LCAccount.m in Sources */,
 				113F2B081828F958001726C3 /* AFJSONRequestOperation.m in Sources */,
 				113F2B191828F958001726C3 /* NSData+Base64.m in Sources */,
 				113F2B031828F958001726C3 /* UITabBar+Background.m in Sources */,
@@ -853,8 +896,11 @@
 				111C707E182A3B7200CA7153 /* ASIDataCompressor.m in Sources */,
 				113F2B371828F958001726C3 /* SNImageRequestOperation.m in Sources */,
 				113F2AFD1828F958001726C3 /* NSDate+Local.m in Sources */,
+				114D0EF41839DBB60072FD36 /* HTMLParser.m in Sources */,
 				113F2B151828F958001726C3 /* ASIHTTPRequest.m in Sources */,
+				114D0EED1839AC740072FD36 /* LCAccountManager.m in Sources */,
 				113F2B401828F958001726C3 /* TBXML.m in Sources */,
+				114D0EF31839DBB60072FD36 /* HTMLNode.m in Sources */,
 				113F2B1A1828F958001726C3 /* OAuth+Additions.m in Sources */,
 				113F2B391828F958001726C3 /* SNNetworkClient+Image.m in Sources */,
 				113F2B341828F958001726C3 /* NSObject+SafeBlock.m in Sources */,
@@ -911,6 +957,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/usr/include/libxml2,
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -944,6 +995,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/usr/include/libxml2,
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

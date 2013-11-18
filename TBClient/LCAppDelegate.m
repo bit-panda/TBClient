@@ -40,6 +40,8 @@
 - (void)applicationWillEnterForeground:(UIApplication *)application
 {
     [[LCBackgroundRunner sharedInstance] stop];
+    
+    [((LCHomeViewController *) self.window.rootViewController) refreshLablel];
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
