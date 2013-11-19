@@ -332,6 +332,8 @@ HTMLNodeType nodeType(xmlNode * _node)
 		return HTMLHrefNode;
 	else if (strcmp(tagName, "text") == 0)
 		return HTMLTextNode;
+    else if (strcmp(tagName, "font") == 0)
+		return HTMLFontNode;
 	else if (strcmp(tagName, "code") == 0)
 		return HTMLCodeNode;
 	else if (strcmp(tagName, "span") == 0)

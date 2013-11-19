@@ -20,6 +20,7 @@ typedef enum
 {
 	HTMLHrefNode,
 	HTMLTextNode,
+    HTMLFontNode,
 	HTMLUnkownNode,
 	HTMLCodeNode,
 	HTMLSpanNode,

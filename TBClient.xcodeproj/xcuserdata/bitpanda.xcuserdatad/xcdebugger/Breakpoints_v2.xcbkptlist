@@ -153,7 +153,7 @@
                   symbolName = "-[ASIFormDataRequest encodeURL:]"
                   moduleName = "TBClient"
                   urlString = "file:///Users/bitpanda/code/git/TBClient/Libraries/Vendors/ASIHttpRequest/ASIFormDataRequest.m"
-                  timestampString = "406465522.343901"
+                  timestampString = "406539187.726052"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "33"
@@ -167,7 +167,7 @@
                   symbolName = "-[ASIFormDataRequest encodeURL:]"
                   moduleName = "TBClient"
                   urlString = "file:///Users/bitpanda/code/git/TBClient/Libraries/Vendors/ASIHttpRequest/ASIFormDataRequest.m"
-                  timestampString = "406465522.3441"
+                  timestampString = "406539187.726248"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "33"
@@ -191,52 +191,6 @@
             endingLineNumber = "281"
             landmarkName = "-getLeftTicket"
             landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Classes/Model/LCTicket.m"
-            timestampString = "406465521.964139"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
-            landmarkName = "+ticketListWithHtml:"
-            landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "+[LCTicket ticketListWithHtml:]"
-                  moduleName = "TBClient"
-                  urlString = "file:///Users/bitpanda/code/git/TBClient/Classes/Model/LCTicket.m"
-                  timestampString = "406465522.344955"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "36"
-                  endingLineNumber = "36"
-                  offsetFromSymbolStart = "426">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "+[LCTicket ticketListWithHtml:]"
-                  moduleName = "TBClient"
-                  urlString = "file:///Users/bitpanda/code/git/TBClient/Classes/Model/LCTicket.m"
-                  timestampString = "406465522.345144"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "36"
-                  endingLineNumber = "36"
-                  offsetFromSymbolStart = "886">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

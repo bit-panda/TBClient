@@ -285,7 +285,7 @@
         }
         else
         {
-            NSArray *array = [LCTicket ticketListWithHtml:responseObject];
+            NSArray *array = [LCTicket ticketListWithHtmlData:responseObject];
             
             step = kLCLOOP_STATUS_STEP_DID_LOAD_TICKETS;
             self.countOfGetTickets += 1;
