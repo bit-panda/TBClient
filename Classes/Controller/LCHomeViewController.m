@@ -19,6 +19,16 @@
     NSString *verifyCode;
     NSString *loginRand;
  
+    UIImageView *textBackgroundView;
+    UIImageView *usernameIcon;
+    UIImageView *passwordIcon;
+    UIImageView *verifyIcon;
+    
+    UITextField *userTextField;
+    UITextField *passwordTextField;
+    UITextField *verifyTextField;
+    
+    
     UIButton *loginButton;
     UITextView *verifyTextView;
     UIImageView *verifyImageView;
@@ -57,21 +67,103 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor lightGrayColor];
     
-    verifyTextView = [[UITextView alloc] initWithFrame:CGRectMake(20, 30, 60, 30)];
-    [self.view addSubview:verifyTextView];
+    textBackgroundView = [[UIImageView alloc] initWithImage:[[UIImage localImageNamed:@"login_text_background.png"] stretchableImageByCenter]];
+    textBackgroundView.backgroundColor = [UIColor clearColor];
+    textBackgroundView.frame = CGRectMake((SCREEN_SIZE.width - 260)/2, 50, 260, 135);
+    textBackgroundView.userInteractionEnabled = YES;
+    [self.view addSubview:textBackgroundView];
     
-    verifyImageView = [[UIImageView alloc] initWithFrame:CGRectMake(20, 80, 60, 30)];
+    
+    //username
+    usernameIcon = [[UIImageView alloc] initWithImage:[UIImage localImageNamed:@"login_user_icon.png"]];
+    usernameIcon.alpha = 0.4f;
+    usernameIcon.backgroundColor = [UIColor clearColor];
+    usernameIcon.frame = CGRectMake(10, 12.5f, 20, 20);
+    [textBackgroundView addSubview:usernameIcon];
+    
+    userTextField = [[UITextField alloc] initWithFrame:CGRectMake(45, 5, 200, 35)];
+    userTextField.delegate = self;
+    userTextField.backgroundColor = [UIColor clearColor];
+    userTextField.placeholder = @"用户名/邮箱";
+    userTextField.font = [UIFont systemFontOfSize:16.0f];
+    userTextField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
+	userTextField.clearButtonMode = UITextFieldViewModeWhileEditing;
+	userTextField.autocapitalizationType = UITextAutocapitalizationTypeNone;
+    userTextField.autocorrectionType = UITextAutocorrectionTypeNo;
+	userTextField.returnKeyType = UIReturnKeyNext;
+    [textBackgroundView addSubview:userTextField];
+    
+    //password
+    passwordIcon = [[UIImageView alloc] initWithImage:[UIImage localImageNamed:@"login_password_icon.png"]];
+    passwordIcon.alpha = 0.4f;
+    passwordIcon.backgroundColor = [UIColor clearColor];
+    passwordIcon.frame = CGRectMake(10, 57.5f, 20, 20);
+    [textBackgroundView addSubview:passwordIcon];
+    
+    passwordTextField = [[UITextField alloc] initWithFrame:CGRectMake(45, 50, 200, 35)];
+    passwordTextField.delegate = self;
+    passwordTextField.backgroundColor = [UIColor clearColor];
+    passwordTextField.placeholder = @"密码";
+    passwordTextField.font = [UIFont systemFontOfSize:16.0f];
+    passwordTextField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
+	passwordTextField.clearButtonMode = UITextFieldViewModeWhileEditing;
+	passwordTextField.autocapitalizationType = UITextAutocapitalizationTypeNone;
+    passwordTextField.autocorrectionType = UITextAutocorrectionTypeNo;
+	passwordTextField.returnKeyType = UIReturnKeyNext;
+    passwordTextField.secureTextEntry = YES;
+    [textBackgroundView addSubview:passwordTextField];
+    
+    //verifycode
+    verifyIcon = [[UIImageView alloc] initWithImage:[UIImage localImageNamed:@"login_verify_icon.png"]];
+    verifyIcon.alpha = 0.4f;
+    verifyIcon.backgroundColor = [UIColor clearColor];
+    verifyIcon.frame = CGRectMake(10, 102.5f, 20, 20);
+    [textBackgroundView addSubview:verifyIcon];
+    
+    verifyTextField = [[UITextField alloc] initWithFrame:CGRectMake(45, 95, 100, 35)];
+    verifyTextField.delegate = self;
+    verifyTextField.backgroundColor = [UIColor clearColor];
+    verifyTextField.placeholder = @"验证码";
+    verifyTextField.font = [UIFont systemFontOfSize:16.0f];
+    verifyTextField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
+	verifyTextField.clearButtonMode = UITextFieldViewModeWhileEditing;
+	verifyTextField.autocapitalizationType = UITextAutocapitalizationTypeNone;
+    verifyTextField.autocorrectionType = UITextAutocorrectionTypeNo;
+	verifyTextField.returnKeyType = UIReturnKeyDone;
+    [textBackgroundView addSubview:verifyTextField];
+    
+    verifyImageView = [[UIImageView alloc] initWithFrame:CGRectMake(150, 97.5f, 60, 30)];
     verifyImageView.backgroundColor = [UIColor blackColor];
-    [self.view addSubview:verifyImageView];
+    [textBackgroundView addSubview:verifyImageView];
+    
+    //line
+    UIImageView *line = [[UIImageView alloc] initWithImage:[[UIImage localImageNamed:@"login_line.png"] stretchableImageByCenter]];
+    line.backgroundColor = [UIColor clearColor];
+    line.frame = CGRectMake(1, 44, 259, 1);
+    [textBackgroundView addSubview:line];
+    [line release];
+    
+    line = [[UIImageView alloc] initWithImage:[[UIImage localImageNamed:@"login_line.png"] stretchableImageByCenter]];
+    line.backgroundColor = [UIColor clearColor];
+    line.frame = CGRectMake(1, 89, 259, 1);
+    [textBackgroundView addSubview:line];
+    [line release];
+    
+    
+    verifyTextView = [[UITextView alloc] initWithFrame:CGRectMake(20, 30, 60, 30)];
+//    [self.view addSubview:verifyTextView];
+    
+
+//    [self.view addSubview:verifyImageView];
     
     loginButton = [[UIButton alloc] initWithFrame:CGRectMake(20, 140, 60, 30)];
     loginButton.backgroundColor = [UIColor blueColor];
     [loginButton addTarget:self action:@selector(readyForLogin) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:loginButton];
+//    [self.view addSubview:loginButton];
     
     flagLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 200, 100, 30)];
     flagLabel.text = [NSString stringWithFormat:@"%d + %d", [LCLoopLoadManager sharedInstance].countOfGetTickets, [LCLoopLoadManager sharedInstance].countOfLogin];
-    [self.view addSubview:flagLabel];
+//    [self.view addSubview:flagLabel];
     
     [LCLoopLoadManager sharedInstance].verifyImageView = verifyImageView;
     

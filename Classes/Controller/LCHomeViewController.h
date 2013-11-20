@@ -8,6 +8,6 @@
 
 #import "LCViewController.h"
 
-@interface LCHomeViewController : LCViewController
+@interface LCHomeViewController : LCViewController<UITextFieldDelegate>
 - (void) refreshLablel;
 @end

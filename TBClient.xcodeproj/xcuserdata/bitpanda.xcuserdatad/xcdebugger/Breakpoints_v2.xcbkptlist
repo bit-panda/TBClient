@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Classes/Controller/LCHomeViewController.m"
-            timestampString = "406439829.689426"
+            timestampString = "406624500.397075"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "150"
-            endingLineNumber = "150"
+            startingLineNumber = "242"
+            endingLineNumber = "242"
             landmarkName = "-leftTicket"
             landmarkType = "5">
          </BreakpointContent>
@@ -90,11 +90,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Classes/Controller/LCHomeViewController.m"
-            timestampString = "406439829.689426"
+            timestampString = "406624500.397075"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "162"
-            endingLineNumber = "162"
+            startingLineNumber = "254"
+            endingLineNumber = "254"
             landmarkName = "-leftTicket"
             landmarkType = "5">
          </BreakpointContent>
@@ -106,11 +106,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Classes/Controller/LCHomeViewController.m"
-            timestampString = "406439829.689426"
+            timestampString = "406624500.397075"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "163"
-            endingLineNumber = "163"
+            startingLineNumber = "255"
+            endingLineNumber = "255"
             landmarkName = "-leftTicket"
             landmarkType = "5">
          </BreakpointContent>
@@ -153,12 +153,12 @@
                   symbolName = "-[ASIFormDataRequest encodeURL:]"
                   moduleName = "TBClient"
                   urlString = "file:///Users/bitpanda/code/git/TBClient/Libraries/Vendors/ASIHttpRequest/ASIFormDataRequest.m"
-                  timestampString = "406539187.726052"
+                  timestampString = "406624500.416443"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "33"
                   endingLineNumber = "33"
-                  offsetFromSymbolStart = "39">
+                  offsetFromSymbolStart = "48">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -167,12 +167,12 @@
                   symbolName = "-[ASIFormDataRequest encodeURL:]"
                   moduleName = "TBClient"
                   urlString = "file:///Users/bitpanda/code/git/TBClient/Libraries/Vendors/ASIHttpRequest/ASIFormDataRequest.m"
-                  timestampString = "406539187.726248"
+                  timestampString = "406624500.416625"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "33"
                   endingLineNumber = "33"
-                  offsetFromSymbolStart = "205">
+                  offsetFromSymbolStart = "192">
                </Location>
             </Locations>
          </BreakpointContent>
